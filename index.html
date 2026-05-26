@@ -1,251 +1,55 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+<div class="content">
 
-  <!-- 字體 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <div class="tag">
+    visual diary
+  </div>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+  <div class="date">
+    photography · moments · stories
+  </div>
 
-    body{
-      background:#000;
-      color:white;
-      font-family:'Montserrat',sans-serif;
-      overflow:hidden;
-    }
+  <h1 style="
+    font-weight:300;
+    text-transform:none;
+    letter-spacing:-1px;
+    line-height:1.2;
+  ">
+    collecting quiet<br>
+    moments through<br>
+    light and shadow
+  </h1>
 
-    .container{
-      display:flex;
-      width:100%;
-      height:100vh;
-    }
+  <p style="
+    color:#b5b5b5;
+    font-size:15px;
+    line-height:2;
+    font-weight:300;
+  ">
+    用影像記錄日常、情緒與時間流動。<br>
+    喜歡安靜的光線、模糊的情感，<br>
+    以及那些無法被言語完整描述的瞬間。
+  </p>
 
-    /* 左側圖片 */
-    .left{
-      width:50%;
-      position:relative;
-      overflow:hidden;
-    }
+  <div class="buttons">
 
-    .left img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      filter:brightness(0.9);
-      transition:1s ease;
-    }
+    <a href="work.pdf" target="_blank" class="btn btn-main"
+      style="
+        background:#f3f3f3;
+        color:#111;
+        font-weight:500;
+      ">
+      view portfolio
+    </a>
 
-    .left:hover img{
-      transform:scale(1.03);
-    }
-
-    /* 右側內容 */
-    .right{
-      width:50%;
-      background:#000;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      position:relative;
-      padding:60px;
-    }
-
-    .content{
-      max-width:520px;
-    }
-
-    .tag{
-      font-size:14px;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      color:#aaa;
-      margin-bottom:50px;
-    }
-
-    .date{
-      font-size:12px;
-      color:#666;
-      margin-bottom:35px;
-      letter-spacing:1px;
-    }
-
-    h1{
-      font-size:clamp(3rem,6vw,6rem);
-      font-weight:900;
-      line-height:1.05;
-      text-transform:uppercase;
-      margin-bottom:40px;
-    }
-
-    p{
-      color:#999;
-      line-height:1.9;
-      font-size:15px;
-      margin-bottom:45px;
-      max-width:440px;
-    }
-
-    .buttons{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      text-decoration:none;
-      padding:16px 34px;
-      border-radius:100px;
-      font-size:14px;
-      font-weight:700;
-      letter-spacing:1px;
-      transition:0.3s ease;
-    }
-
-    .btn-main{
-      background:white;
-      color:black;
-    }
-
-    .btn-main:hover{
-      background:#ddd;
-      transform:translateY(-2px);
-    }
-
-    .btn-outline{
-      border:1px solid rgba(255,255,255,0.25);
-      color:white;
-    }
-
-    .btn-outline:hover{
-      background:white;
-      color:black;
-    }
-
-    /* 底線 */
-    .bottom-line{
-      position:absolute;
-      bottom:0;
-      left:0;
-      width:100%;
-      height:2px;
-      background:white;
-      opacity:0.9;
-    }
-
-    /* 角落文字 */
-    .corner{
-      position:absolute;
-      top:40px;
-      right:50px;
-      font-size:12px;
-      color:#666;
-      letter-spacing:2px;
-    }
-
-    /* 手機版 */
-    @media(max-width:900px){
-
-      body{
-        overflow:auto;
-      }
-
-      .container{
-        flex-direction:column;
-        height:auto;
-      }
-
-      .left,
-      .right{
-        width:100%;
-      }
-
-      .left{
-        height:55vh;
-      }
-
-      .right{
-        min-height:45vh;
-        padding:50px 30px 80px;
-      }
-
-      h1{
-        font-size:3rem;
-      }
-
-      .corner{
-        right:30px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <!-- 左邊圖片 -->
-    <section class="left">
-      <img src="me.jpg" alt="My Portrait">
-    </section>
-
-    <!-- 右邊內容 -->
-    <section class="right">
-
-      <div class="corner">
-        PORTFOLIO 2025
-      </div>
-
-      <div class="content">
-
-        <div class="tag">
-          Featured Story
-        </div>
-
-        <div class="date">
-          CREATIVE DIRECTOR · PHOTOGRAPHER · DESIGNER
-        </div>
-
-        <h1>
-          A Surreal<br>
-          Creative World
-        </h1>
-
-        <p>
-          我是一位專注於影像、設計與敘事的創作者。
-          透過視覺與光影，探索情感、空間與故事之間的連結。
-        </p>
-
-        <div class="buttons">
-
-          <!-- PDF 作品集 -->
-          <a href="work.pdf" target="_blank" class="btn btn-main">
-            VIEW WORK
-          </a>
-
-          <!-- Email -->
-          <a href="mailto:your@email.com" class="btn btn-outline">
-            CONTACT
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="bottom-line"></div>
-
-    </section>
+    <a href="mailto:your@email.com" class="btn btn-outline"
+      style="
+        border-color:#444;
+        color:#ccc;
+        font-weight:300;
+      ">
+      say hello
+    </a>
 
   </div>
 
-</body>
-</html>
+</div>
